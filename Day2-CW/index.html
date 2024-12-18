@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day2-CW</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    div {
+      margin: 20px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #ffffff;
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    // Main heading
+    const mainHeading = React.createElement('h1', null, 'This is H1');
+
+    // First div with a paragraph
+    const firstDiv = React.createElement('div', null, 
+      React.createElement('p', null, 'This is the first section of the page as P Tag')
+    );
+
+    // Second div with a paragraph and anchor
+    const secondDiv = React.createElement('div', null, 
+      React.createElement('p', null, 'For more information, visit:'),
+      React.createElement('a', { href: 'https://reactjs.org/', target: '_blank' }, 'ReactJS Official Documentation')
+    );
+
+    // Last div with a paragraph
+    const lastDiv = React.createElement('div', null, 
+      React.createElement('p', null, 'Thank you for visiting. Have a great day!')
+    );
+
+    // Combine all elements into a single container
+    const container = React.createElement('div', null, mainHeading, firstDiv, secondDiv, lastDiv);
+
+    // Render the container
+    ReactDOM.render(container, document.getElementById('root'));
+  </script>
+</body>
+</html>
