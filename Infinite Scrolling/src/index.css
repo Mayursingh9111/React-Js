@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+/* Designer background for the gallery */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #f06, #00f); /* Gradient background */
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.image-container {
+  position: relative;
+  margin: 10px;
+}
+
+.image-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.image-container a {
+  display: block;
+}
+
+.image-container:hover img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+p {
+  margin: 5px 0;
+}
+
+/* Extra styling for links */
+.image-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.image-container a:hover {
+  color: #fff; /* White color on hover */
+}
+h1{
+  text-align: center;
+  
+}
